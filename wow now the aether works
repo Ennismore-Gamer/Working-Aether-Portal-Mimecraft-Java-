@@ -1,0 +1,48 @@
+# Aether Portal Plugin for Spigot
+
+## Step-by-Step Guide to Create the Plugin
+
+### Prerequisites:
+1. **Java Development Kit (JDK)**: Download and install JDK 8 or later.  
+   - [Download JDK](https://adoptopenjdk.net/) or [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+
+2. **IDE**: Use IntelliJ IDEA or Eclipse for development.
+
+3. **Maven**: If you're using IntelliJ IDEA, Maven is integrated. Otherwise, install Maven.
+
+4. **Spigot Server**: Download the Spigot server from [SpigotMC](https://www.spigotmc.org/).
+
+---
+
+### 1. Set Up Your Project with Maven
+
+1. **Create a Maven Project**:
+   - In IntelliJ, select **File** -> **New** -> **Project**.
+   - Choose **Maven** and follow the setup instructions.
+
+2. **Add Dependencies**:
+   In your Maven project, locate the `pom.xml` file and add the **Spigot API** dependency. Your `pom.xml` should look like this:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>aetherportal</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>AetherPortal</name>
+
+    <repositories>
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <gr
